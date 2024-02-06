@@ -1,0 +1,373 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>MY PROFILE</title>
+		<link rel="stylesheet" href="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css"/>
+		<script src="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+		<link rel="stylesheet" href="index.css">
+		
+	</head>
+	<body>
+		<div class="container">
+			<!-- navbar start -->
+			<header class="header-part fixed-top"  style="width:auto">
+				<nav class="navbar navbar-expand-lg  ">
+					<div class="container">
+						<span class="navbar-brand">MAN<b style="margin-left: -5px;color:#f9532d;" color="#2db2f9">GAL</b> </span>
+						<div class="form-check form-switch pt-1">
+						<!-- set dark mode checkbox start -->
+							<input class="form-check-input" type="checkbox" id="switch" onclick="darkMode()">
+							<label class="form-check-label" for="switch">Dark</label>
+						</div>
+						<!-- set dark mode javascript code start -->
+						<script type="text/javascript">
+							let app = document.getElementsByTagName('body')[0];
+							if(localStorage.lightMode=="dark"){
+								app.setAttribute("darkMode","dark");
+								document.getElementById("switch").checked=true;
+							}
+							function darkMode(){			
+								if(localStorage.lightMode=="dark"){
+									localStorage.lightMode="light";
+									app.setAttribute("darkMode","light");
+								}
+								else{
+									localStorage.lightMode="dark";
+									app.setAttribute("darkMode","dark");
+								}
+								console.log("loghtMode="+localStorage.lightMode);
+						}	
+						</script>
+						<!-- dark mode javascript code end -->
+						<!-- dark mode checkbox end -->
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+							<i class="fa-solid fa-bars-staggered"></i>
+						</button>
+						<div class="collapse navbar-collapse " id="Navbar">
+							<ul class="navbar-nav ">
+								<li class="nav-item"><a class="nav-link js-scroll-trigger " href="#HOME">HOME</a></li>
+								<li class="nav-item"><a class="nav-link js-scroll-trigger " href="#ABOUT">ABOUT</a></li>
+								<li class="nav-item"><a class="nav-link js-scroll-trigger " href="#EDUCATION">EDUCATION</a></li>
+								<li class="nav-item"><a class="nav-link js-scroll-trigger " href="#Skills">Skills </a></li>
+								<li class="nav-item"><a class="nav-link js-scroll-trigger " href="#PORTFOLIO">PORTFOLIO</a></li>
+								<li class="nav-item"><a class="nav-link js-scroll-trigger " href="#CONTACT">CONTACT</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<!-- Responsive jquery code start -->
+				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+				<script type="text/javascript">
+					$('.js-scroll-trigger').click(function () {
+						$('.navbar-collapse').collapse('hide');
+					});
+				</script>
+				<!-- Responsive jquery code end -->
+			</header>
+			<!-- navbar end -->
+
+			<!-- home section start -->
+			<section class="home section d-flex " id="HOME">
+				<div class="container align-self-center">	
+					<div class="row">
+						<div class="col-lg-6 col-12 lh-lg mt-5">
+							<div class="home-info align-self-center">
+								<h4 class="hello">Hello,my name is <span class="name">Mangal Chand Mali</span></h4>
+								<h4 class="my-profession">I' m a <span class="typing"></span></h4>
+								<p>I'm an web designer and web developer with extensive expertise in creating and designing websites.</p>
+								<a href="#CONTACT" class="btn hire-me sm-s mt-4"><span></span>Hire Me</a>
+								<a href="#" class="btn hire-me ms-3 sm-s mt-4"><span></span>Download CV</a>
+							</div>
+						</div>
+						<div class=" col-lg-6  col-md-4 pb-4">
+							<!-- align-self-center -->
+							<div class="home-img ">   
+								 <div class="content">
+									<img src="My-Photos/home-img-1.jpg" alt="" class="img-fluid" >
+								</div>
+							</div>
+						</div> 
+					</div>
+				</div>
+			</section>
+			<!-- text Effect use javascript start-->
+			<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+			<script>
+				var typed = new Typed(".typing",{
+					strings:[" ","Web Developer","","Web Designer"],
+					typeSpeed:120,
+					BackSpeed:90,
+					loop:true
+				})
+			</script>
+			<!-- text Effect use javascript end-->
+			<!-- home section end -->
+
+			<!-- About start -->
+
+			<section class="about" id="ABOUT">
+				<div class="home-content">
+					<div class="container">
+						<h2 class="menu-heading text-center">About <span>Me</span></h2>
+						<div class="row">
+							<div class="col-lg-4 col-12">
+								<div class="about-img">
+									<img src="My-Photos/about-img-1.jpg" alt="about me" class="img-fluid re">
+								</div>
+							</div>
+							<div class="col-lg-8 col-12 ps-5">
+								<div class="about-content d-flex flex-column  ps-4">
+									<h5 class="about-heading">MANGAL CHAND MALI</h5>
+									<p class="about-para">Web Developer</p>
+									<p class="about-text lh-lg">
+										Embarking on the dynamic path of web development, I am a dedicated novice eager to craft digital experiences. Armed with a foundation in HTML, CSS, and JavaScript, I am navigating the intricate world of coding to build intuitive and visually appealing websites. Embracing challenges as opportunities to learn, I am on a mission to grow and contribute to the ever-evolving landscape of web development.  💻🚀	
+									</p>
+									<div class="information">
+										<ul class="list">
+											<li class="item circle"><b class="ms-4">Design Excellence:</b></li>
+											<li class="item circle"><b class="ms-4">Problem Solver:</b></li>
+											<li class="item circle"><b class="ms-4">Innovative Thinker:</b></li>
+											<li class="item circle"><b class="ms-4">Effective Communicator:</b></li>
+											<li class="item "><b class="ms-4">Client-Centric Approach:</b></li>
+										</ul>
+									</div>
+									<a href="#CONTACT" class="btn about_btn"><span></span>Hire Me</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- About end -->
+			
+			<!-- EDUCATION START -->
+			<section class="education" id="EDUCATION">
+				<div class="container">
+					<h2 class="menu-heading text-center mt-5 pt-5">My <span>journey</span></h2>
+					<div class="title">Education :</div>
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="ed-content border border-2 border-dark rounded-3 p-4 mt-5">
+								<div class="year"><i class="fa-sharp fa-solid fa-calendar-days"></i> <b>2015-2016</b></div>
+								<h5>Board of Secondary Education Raj.</h5>
+								<p class="du">Duration: 1 years</p>
+								<p class="sum">In addition to academic subjects, emphasis may be placed on developing essential skills, including critical thinking and effective communication.</p>
+							</div>
+							<div class="ed-content border border-2 border-dark rounded-3 p-4 mt-5">
+								<div class="year"><i class="fa-sharp fa-solid fa-calendar-days"></i> <b>2017-2018</b></div>
+								<h5>Board of Secondary Education Raj.</h5>
+								<p class="du">Duration: 1 years</p>
+								<p class="sum">Beyond academic knowledge, the 12th grade often emphasizes the development of critical skills such as problem-solving, research, and effective communication.</p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="ed-content border border-2 border-dark rounded-3 p-4 mt-5">
+								<div class="year"><i class="fa-sharp fa-solid fa-calendar-days"></i> <b>2018-2021</b></div>
+								<h5>Bachelor's Degree (B.A.):</h5>
+								<p class="du">Duration: 3-4 years</p>
+								<p class="sum">Graduates are instilled with a life-long learning mindset, understanding the importance of staying updated with evolving technologies. </p>
+							</div>
+							<div class="ed-content border border-2 border-dark rounded-3 p-4 mt-5">
+								<div class="year"><i class="fa-sharp fa-solid fa-calendar-days"></i> <b>2023</b></div>
+								<h5>Master's in Computer Applications (MCA):</h5>
+								<p class="du">Duration: 2-3 years</p>
+								<p class="sum">Focus: Pursue a Master's in Computer Applications to deepen knowledge and specialize in areas such as software development, database management, and systems analysis.</p>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- EDUCATION END -->
+			<!-- skill start -->
+			<section class="sk" id="Skills">
+				<div class="container">
+					<h2 class="menu-heading text-center mt-5 pt-5">My <span>Skills</span></h2>
+					<div class="row m">
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="row mt-3">
+								<div class="col-6">
+									<div class=" skill">HTML</div>
+								</div> 
+								<div class="col-6">
+									<div class=" text-end skill">95%</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="progress" >
+											<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:95%"></div>
+										</div>
+									</div>	
+								</div>	
+							</div>
+							<div class="row mt-3">
+								<div class="col-6">
+									<div class="  skill">CSS</div>
+								</div> 
+								<div class="col-6">
+									<div class="  text-end skill">90%</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped progress-bar-animated "  style="width:90%;"></div>
+										</div>
+									</div>	
+								</div>	
+							</div>
+							<div class="row mt-3">
+								<div class="col-6">
+									<div class="  skill">BOOTSTARP</div>
+								</div> 
+								<div class="col-6">
+									<div class="  text-end skill">80%</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%"></div>
+										</div>
+									</div>	
+								</div>	
+							</div>
+						</div> 
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="row mt-3">
+								<div class="col-6">
+									<div class="  skill">C</div>
+								</div> 
+								<div class="col-6">
+									<div class="  text-end skill">90%</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped progress-bar-animated "  style="width:90%;"></div>
+										</div>
+									</div>	
+								</div>	
+							</div>
+							<div class="row mt-3">
+								<div class="col-6">
+									<div class="  skill">JAVASCRIPT</div>
+								</div> 
+								<div class="col-6">
+									<div class="  text-end skill">60%</div>
+								</div>
+								<div class="row ">
+									<div class="col-12">
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped progress-bar-animated " style="width:60%; "></div>
+										</div>
+									</div>	
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- skill end -->
+
+			<!-- portfolio start -->
+			<section class="project" id="PORTFOLIO">
+				<div class="container">
+				<h2 class="menu-heading text-center mt-5 pt-5">Latest <span>Project</span></h2>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 mb-4 mt-4">
+						<div class="card p-0">
+							<span style="background-image: url(My-Photos/food-restorent.png);"></span>
+							<a href="https://mangal-chand-mali.github.io/food-restaurant-main/" class="text-end me-3 my-2"><i class="fa-sharp fa-solid live">live</i></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-4 mt-4">
+						<div class="card p-0">
+							<span style="background-image: url(My-Photos/school-temp.jpg);"></span>
+							<a href="https://mangal-chand-mali.github.io/school-template/" class="text-end me-3 my-2"><i class="fa-sharp fa-solid live">live</i></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-4 mt-4">
+						<div class="card p-0">
+							<span style="background-image: url(My-Photos/food-restorent-2.jpg);"></span>
+							<a href=" https://mangal-chand-mali.github.io/food-restaurants/" class="text-end me-3 my-2"><i class="fa-sharp fa-solid live">live</i></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-4 mt-4">
+						<div class="card p-0">
+							<span style="background-image: url(My-Photos/events-temp.jpg);"></span>
+							<a href=" https://mangal-chand-mali.github.io/food-restaurant-page-1/" class="text-end me-3 my-2"><i class="fa-sharp fa-solid live">live</i></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-4 mt-4">
+						<div class="card p-0">
+							<span style="background-image: url(My-Photos/book\ table.jpg);"></span>
+							<a href="https://mangal-chand-mali.github.io/food-restaurant-page-5/" class="text-end me-3 my-2"><i class="fa-sharp fa-solid live">live</i></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 mb-4 mt-4">
+						<div class="card p-0">
+							<span style="background-image: url(My-Photos/food-restorent-3.jpg);"></span>
+							<a href=" https://mangal-chand-mali.github.io/food-restaurant-page-6/" class="text-end me-3 my-2"><i class="fa-sharp fa-solid live">live</i></a>
+						</div>
+					</div>
+				</div>
+
+				</div>
+			</section>
+			<!-- portfolio end -->
+
+
+			<!-- contcat start -->
+			<section class="contcat" id="CONTACT">
+				<div class="container">
+					<h2 class="menu-heading text-center mt-5 pt-5">Contact <span>Me</span></h2>
+					<!-- <div class="hr"></div> -->
+					<div class="row">
+						<div class="col-lg-7 col-md-7 col-sm-12 ">
+							<div>
+								<h1><span>Contact :</span></h1>
+								<p class="pe-5">Welcome to my portfolio! I'm thrilled to share my work and experiences with you. Feel free to get in touch for inquiries, collaborations, or any other matters. Don't hesitate to drop me a message – I'm looking forward to connecting with you!</p>
+								<input type="text" placeholder="name" class="in out">
+								<input type="email" placeholder="Email" class="in out">
+								<input type="text" placeholder="subject" class="in out">
+								<textarea name="" id=""  rows="3" placeholder="massage" class="in"></textarea>
+							</div>
+								<button id="btncontcat" class="btn btn-email in mt-4 px-5"><span></span>Send</button>
+							
+						</div>
+						<div class="col-lg-5 col-md-5">
+							<h1><span>information :</span></h1>
+							<p><b>Social Media: </b> Individual has social media profiles related to their professional work, you might find contact information there. </p>
+							<div class=""><i class="fa-solid fa-envelope c"></i> <span class="h5">mangalmali544@gmail.com</span></div>
+							<div class=""><i class="fa-solid fa-phone c"></i> <span class="h5">+91 8107533845</span></div>
+							<div class=""><i class="fa-solid fa-house c"></i> <span class="h5">Aadrsh Nager,Ajmer</span></div>
+							
+							<div class="social-links mt-4">
+								<i class="fa-brands fa-twitter" style="color: rgb(0, 153, 255);"></i>
+								<i class="fa-brands fa-facebook" style="color: rgb(52, 85, 148);"></i>
+								<i class="fa-brands fa-youtube" style="color: red;"></i>
+								<i class="fa-brands fa-linkedin" style="color: #0a66c2;"></i>
+								<i class="fa-brands fa-instagram" style="color: rgb(230, 41, 104);"></i>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- contcat end -->
+
+			<!-- Fotter start -->
+			<section class="fotter  border-top">
+				<div class="container mt-3">
+					<p class="text-center pb-3">Created By Mangal Chand Mali | <b style="font-size: 20px;">&copy</b> 2021 All rights reserved.</p>
+				</div>
+			</section>
+			<!-- Fotter end -->
+		</div>
+	</body>
+</html>
